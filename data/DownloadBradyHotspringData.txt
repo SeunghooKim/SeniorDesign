@@ -1,0 +1,17 @@
+
+You can browse and download the files in the bucket at:
+
+https://data.openei.org/s3_viewer?bucket=nrel-pds-porotomo&prefix=DAS%2FH5%2FDASH%2F
+
+To download through the command line,
+
+1) Make sure you have a aws CLI installed
+
+2) Run aws s3 cp --no-sign-request s3://nrel-pds-porotomo/(directory to file) "Location to download files to".
+
+eg: aws s3 cp --no-sign-request s3://nrel-pds-porotomo/DAS/H5/DASH/20160315/PoroTomo_iDAS16043_160315083149.h5 D:\CSM\Mines_Research\Test_data\
+
+This downloads data from bucket s3://nrel-pds-porotomo(specific file s3://nrel-pds-porotomo/DAS/H5/DASH/20160315/PoroTomo_iDAS16043_160315083149.h5)
+to the local directory "D:\CSM\Mines_Research\Test_data\". 
+
+To load you can use the function "loadBradyHShdf5"
